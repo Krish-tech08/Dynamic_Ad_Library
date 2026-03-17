@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      Custom attributes for BannerAdView.
+      Usage in XML:
+          app:screenId="home_screen"
+    -->
+    <declare-styleable name="BannerAdView">
+        <attr name="screenId" format="string" />
+    </declare-styleable>
+</resources>

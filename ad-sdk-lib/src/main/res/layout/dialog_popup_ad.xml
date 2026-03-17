@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Popup ad dialog layout.
+  Centered card with a close button in the top-right corner.
+  The card width is 90 % of screen width via layout_width + margins.
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginStart="24dp"
+    android:layout_marginEnd="24dp">
+
+    <!-- Ad card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp">
+
+        <ImageView
+            android:id="@+id/popupAdImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/ad_popup_description"
+            android:scaleType="fitXY" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Close (✕) button — floats in the top-right corner above the card -->
+    <ImageButton
+        android:id="@+id/btnClosePopup"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="-10dp"
+        android:layout_marginEnd="-10dp"
+        android:background="@drawable/bg_close_button"
+        android:contentDescription="@string/ad_close_description"
+        android:src="@drawable/ic_close"
+        android:padding="8dp" />
+
+</FrameLayout>

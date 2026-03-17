@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Banner ad layout.
+  The outer FrameLayout IS the BannerAdView itself (merged into parent),
+  so we use <merge> to avoid an extra nesting level.
+-->
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/bannerImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/ad_banner_description"
+        android:scaleType="fitXY" />
+
+</merge>

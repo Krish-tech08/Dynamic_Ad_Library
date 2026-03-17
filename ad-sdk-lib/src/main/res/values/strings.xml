@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ad_banner_description">Advertisement banner</string>
+    <string name="ad_popup_description">Advertisement popup</string>
+    <string name="ad_close_description">Close advertisement</string>
+</resources>

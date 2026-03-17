@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VidagdhanAds Sample App"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp" />
+
+    <!-- ─────────────────────────────────────────────────────────────────────
+         Pattern 1 — XML BannerAdView
+         Declare the component in XML with app:screenId.
+         The SDK automatically fetches and renders the correct banner.
+         ───────────────────────────────────────────────────────────────────── -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Banner (XML, auto-loaded):"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <com.vidagdhan.ads.ui.banner.BannerAdView
+        android:id="@+id/xmlBannerAdView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:screenId="home_screen" />
+
+    <!-- ─────────────────────────────────────────────────────────────────────
+         Pattern 2 — Programmatic banner container
+         VidagdhanAds.showBanner() injects a BannerAdView here at runtime.
+         ───────────────────────────────────────────────────────────────────── -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Banner (programmatic):"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp" />
+
+    <FrameLayout
+        android:id="@+id/programmaticBannerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- ─────────────────────────────────────────────────────────────────────
+         Pattern 3 — Popup ad trigger button
+         ───────────────────────────────────────────────────────────────────── -->
+    <Button
+        android:id="@+id/btnShowPopup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Show Exit Popup Ad" />
+
+    <Button
+        android:id="@+id/btnRefreshAds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Refresh Ads from API" />
+
+</LinearLayout>
