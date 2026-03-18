@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.vidagdhan.ad_sdk_lib"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 24
