@@ -24,6 +24,11 @@ class PopupAdDialog private constructor(
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
+        // Set popup to 90% of screen width
+        val displayMetrics = context.resources.displayMetrics
+        val width = (displayMetrics.widthPixels * 0.90).toInt()
+        window?.setLayout(width, android.view.WindowManager.LayoutParams.WRAP_CONTENT)
+
         val view = LayoutInflater.from(context).inflate(R.layout.dialog_popup_ad, null)
         setContentView(view)
 
@@ -55,7 +60,6 @@ class PopupAdDialog private constructor(
             dismiss()
         }
 
-        // Consume back key — don't let it propagate to activity
         setOnKeyListener { _, keyCode, event ->
             if (keyCode == KeyEvent.KEYCODE_BACK
                 && event.action == KeyEvent.ACTION_UP) {
