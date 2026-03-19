@@ -7,7 +7,7 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.lifecycleScope
 import com.vidagdhan.ad_sdk_lib.manager.AdManager
 import com.vidagdhan.ads.ui.banner.BannerAdView
-import com.vidagdhan.ads.ui.popup.PopupAdDialog
+import com.vidagdhan.ad_sdk_lib.ui.popup.PopupAdDialog
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
